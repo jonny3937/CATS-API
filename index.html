@@ -14,7 +14,7 @@
         <label for="number of cats">number of cats facts(50 maximum)</label>
          <br>
          <div class="place">
-          <input type="text" placeholder="number of cat facts(50max)">
+          <input type="number" placeholder= "number of cat facts(50max)">
         <button class="btn"  type="submit">submit</button></div>
         
       </div>
@@ -22,19 +22,23 @@
         <label for="number of cats">number of cats photos(10 max)</label>
         <br>
         <div class="place"> 
-          <input type="text" placeholder="number of cat photos(10max)">
+          <input type="number"  placeholder="number of cat photos(10max)">
         <button class="btn" type="submit">submit</button></div>
        
       </div>
     </section>
   </header>
+  <div id="loading">
+  <div class="loader"></div>
+</div>
   <section id="results">
     <div id="cats-results">
     
     </div>
     <div id="error-message" style="color: red;"></div>
-    <script src="./src/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/index.js"></script>
+
     </script>
   </section>
 </body>

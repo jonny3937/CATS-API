@@ -1,9 +1,8 @@
-// Make sure Axios is included in your HTML before this script:
-// <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 async function getCatFacts(count) {
   const resultsDiv = document.getElementById('cats-results');
   const errorDiv = document.getElementById('error-message');
+  const loadingDiv = document.getElementById('loading');
   resultsDiv.innerHTML = '';
   errorDiv.textContent = '';
 
@@ -12,22 +11,27 @@ async function getCatFacts(count) {
     return;
   }
 
+  loadingDiv.style.display = 'flex'; 
+
   try {
     for (let i = 0; i < count; i++) {
       const response = await axios.get('https://meowfacts.herokuapp.com/');
       const fact = response.data.data[0];
       const p = document.createElement('p');
-      p.textContent = ` - ${fact}`;
+      p.textContent = `${i + 1}. ${fact}`;
       resultsDiv.appendChild(p);
     }
   } catch (error) {
     errorDiv.textContent = 'Failed to load cat facts.';
+  } finally {
+    loadingDiv.style.display = 'none'; 
   }
 }
 
 async function getCatPhotos(count) {
   const resultsDiv = document.getElementById('cats-results');
   const errorDiv = document.getElementById('error-message');
+  const loadingDiv = document.getElementById('loading');
   resultsDiv.innerHTML = '';
   errorDiv.textContent = '';
 
@@ -35,6 +39,8 @@ async function getCatPhotos(count) {
     errorDiv.textContent = 'Enter a number between 1 and 10 for cat photos.';
     return;
   }
+
+  loadingDiv.style.display = 'flex'; 
 
   try {
     const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=${count}`);
@@ -48,10 +54,11 @@ async function getCatPhotos(count) {
     });
   } catch (error) {
     errorDiv.textContent = 'Failed to load cat photos.';
+  } finally {
+    loadingDiv.style.display = 'none'; 
   }
 }
 
-// DOM interaction (trigger async functions)
 document.addEventListener('DOMContentLoaded', () => {
   const catFactsBtn = document.querySelectorAll('.btn')[0];
   const catPhotosBtn = document.querySelectorAll('.btn')[1];
