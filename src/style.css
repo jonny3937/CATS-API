@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  background-color: #FFD586;
+   padding: 30px 20px;
+  text-align: center;
+  color: black;
+  align-content: space-between;
+  text-transform: capitalize;
+  flex-direction: row;
+
+}
+.divs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btn{
+  background-color: #FFAAAA;
+}
+

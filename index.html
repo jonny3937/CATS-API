@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATS API</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header class="header-container">
+    <h1 class="logo">the cats app</h1>
+    <section class="divs">
+      <div>
+        <label for="number of cats">number of cats facts(50 maximum)</label>
+         <br>
+        <input type="text">
+        <button class="btn"  type="submit">submit</button>
+      </div>
+      <div>
+        <label for="number of cats">number of cats photos(10 max)</label>
+        <br>
+        <input type="text">
+        <button class="btn" type="submit">submit</button>
+      </div>
+    </section>
+  </header>
+  <section id="results">
+    <h2>Results</h2>
+    <div id="cats-results">
+    
+    </div>
+    <div id="error-message" style="color: red;"></div>
+    <script src="./src/index.js"></script>
+    </script>
+  </section>
+</body>
+</html>
