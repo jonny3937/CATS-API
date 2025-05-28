@@ -14,14 +14,20 @@ body {
   align-content: space-between;
   text-transform: capitalize;
   flex-direction: row;
+  justify-content: center;
 
 }
 .divs{
   display: flex;
   flex-direction: row;
   align-items: center;
+  border: 2px solid red;
+  justify-content: space-between;git 
 }
 .btn{
   background-color: #FFAAAA;
+  border-radius: .5px;
+  border: none;
+ 
 }
 
