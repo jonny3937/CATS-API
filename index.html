@@ -13,24 +13,28 @@
       <div>
         <label for="number of cats">number of cats facts(50 maximum)</label>
          <br>
-        <input type="text" placeholder="number of cat facts(50max)">
-        <button class="btn"  type="submit">submit</button>
+         <div class="place">
+          <input type="text" placeholder="number of cat facts(50max)">
+        <button class="btn"  type="submit">submit</button></div>
+        
       </div>
       <div>
         <label for="number of cats">number of cats photos(10 max)</label>
         <br>
-        <input type="text" placeholder="number of cat photos(10max)">
-        <button class="btn" type="submit">submit</button>
+        <div class="place"> 
+          <input type="text" placeholder="number of cat photos(10max)">
+        <button class="btn" type="submit">submit</button></div>
+       
       </div>
     </section>
   </header>
   <section id="results">
-    <h2>Results</h2>
     <div id="cats-results">
     
     </div>
     <div id="error-message" style="color: red;"></div>
     <script src="./src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </script>
   </section>
 </body>
