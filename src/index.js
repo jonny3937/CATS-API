@@ -49,7 +49,9 @@ async function getCatPhotos(count) {
       img.src = photo.url;
       img.alt = 'A cat';
       img.style.width = '200px';
+      img.style.height = '250px';
       img.style.margin = '10px';
+      img.style.padding = '3rem';
       resultsDiv.appendChild(img);
     });
   } catch (error) {
